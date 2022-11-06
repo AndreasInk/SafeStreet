@@ -26,6 +26,8 @@
 		E1D4557A29174EBC00D59FCD /* TermsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D4557929174EBC00D59FCD /* TermsView.swift */; };
 		E1FCAA3329185A2B00171ABB /* VitoKitCore in Frameworks */ = {isa = PBXBuildFile; productRef = E1FCAA3229185A2B00171ABB /* VitoKitCore */; };
 		E1FCAA352918627C00171ABB /* DesignateAFriendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FCAA342918627C00171ABB /* DesignateAFriendView.swift */; };
+		E1FCAA38291873D300171ABB /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FCAA37291873D300171ABB /* OnboardingView.swift */; };
+		E1FCAA3A2918741A00171ABB /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FCAA392918741A00171ABB /* Onboarding.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		E1FCAA302918598600171ABB /* VitoKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = VitoKit; path = ../GitHub/VitoKit; sourceTree = "<group>"; };
 		E1FCAA342918627C00171ABB /* DesignateAFriendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignateAFriendView.swift; sourceTree = "<group>"; };
 		E1FCAA36291865E600171ABB /* SafeStreet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SafeStreet.entitlements; sourceTree = "<group>"; };
+		E1FCAA37291873D300171ABB /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		E1FCAA392918741A00171ABB /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				E1D4555B291743FA00D59FCD /* Route.swift */,
+				E1FCAA392918741A00171ABB /* Onboarding.swift */,
 				E1D4557729174D3E00D59FCD /* Friend.swift */,
 				E1D455692917447600D59FCD /* ChartData.swift */,
 			);
@@ -127,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				E1D4554D291742F400D59FCD /* ContentView.swift */,
+				E1FCAA37291873D300171ABB /* OnboardingView.swift */,
 				E1D4557629174BEA00D59FCD /* Home */,
 				E1D4557529174BE100D59FCD /* Settings */,
 			);
@@ -254,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1FCAA3A2918741A00171ABB /* Onboarding.swift in Sources */,
 				E1D4554E291742F400D59FCD /* ContentView.swift in Sources */,
 				E1D4557829174D3E00D59FCD /* Friend.swift in Sources */,
 				E1D4555C291743FA00D59FCD /* Route.swift in Sources */,
@@ -269,6 +276,7 @@
 				E1D455662917444B00D59FCD /* Int64+Extension.swift in Sources */,
 				E1FCAA352918627C00171ABB /* DesignateAFriendView.swift in Sources */,
 				E1D455632917442A00D59FCD /* Image+Extension.swift in Sources */,
+				E1FCAA38291873D300171ABB /* OnboardingView.swift in Sources */,
 				E1D4557229174BCB00D59FCD /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

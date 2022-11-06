@@ -29,6 +29,8 @@ struct ContentView: View {
                     switch route {
                     case .home:
                         HomeView(chartData: vm.healthData)
+                    case .onboarding:
+                        OnboardingView()
                     case .terms:
                         TermsView(pushedFromSettings: false)
                 default:

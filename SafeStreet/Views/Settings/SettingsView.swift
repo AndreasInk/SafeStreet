@@ -57,7 +57,7 @@ struct SettingsView: View {
                 Text("Legal")
             }
             NavigationLink {
-                EmptyView()
+                OnboardingView()
             } label: {
                 Text("Onboarding")
             }
