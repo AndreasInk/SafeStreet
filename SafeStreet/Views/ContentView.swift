@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var vm = ViewModel()
+    @StateObject var vm = ViewModel(selectedTypes: [.Mobility])
     var body: some View {
         NavigationStack(path: $vm.navPath) {
             IntroView()

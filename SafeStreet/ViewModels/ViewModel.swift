@@ -6,8 +6,9 @@
 //
 
 import SwiftUI
-
-class ViewModel: ObservableObject {
+import VitoKitCore
+class ViewModel: Vito {
+    
     @Published var navPath = NavigationPath()
     
     @Published var friends = Friend.test
@@ -22,7 +23,9 @@ class ViewModel: ObservableObject {
     
     @AppStorage("agreeToTerms") var agreeToTerms = false
     
-    init() {
+    init(selectedTypes: [HealthType]) {
+        super.init(selectedTypes: selectedTypes)
+        self.selectedTypes = selectedTypes
         if !agreeToTerms {
             navPath.append(Route.terms)
         }

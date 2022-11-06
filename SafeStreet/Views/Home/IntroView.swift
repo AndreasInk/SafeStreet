@@ -15,8 +15,7 @@ struct IntroView: View {
                 .aspectRatio(1/1, contentMode: .fit)
                 .foregroundStyle(Gradient.split)
             Text("SAFE STREET")
-                .fontDesign(.monospaced)
-                .font(.system(size: 50))
+                .font(.system(size: 50, design: .rounded))
         }
     }
 }

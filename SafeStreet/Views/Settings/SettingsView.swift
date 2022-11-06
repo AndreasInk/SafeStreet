@@ -34,7 +34,7 @@ struct SettingsView: View {
                     Text("Friend Notifications \(vm.alertsOn ? "ON" : "OFF")")
                 }
                 VStack(alignment: .leading) {
-                    Button("Notification Schedule Dates \(!showMultiDates ? ">" : "˅")") {
+                    Button("Notification Schedule Dates") {
                         showMultiDates.toggle()
                     }
                     if showMultiDates {
@@ -55,17 +55,25 @@ struct SettingsView: View {
             } label: {
                 Text("Legal")
             }
+            NavigationLink {
+                EmptyView()
+            } label: {
+                Text("Onboarding")
+            }
+            NavigationLink {
+                EmptyView()
+            } label: {
+                Text("About")
+            }
             
 
         }
         .navigationTitle(
             Text("Settings")
-            .fontDesign(.monospaced)
-            .fontWeight(.semibold)
         )
         .navigationBarTitleDisplayMode(NavigationBarItem.TitleDisplayMode.large)
-        .fontDesign(.monospaced)
         .fontWeight(.semibold)
+        .font(.system(.headline, design: .rounded))
     }
 }
 
@@ -73,6 +81,6 @@ struct SettingsView_Previews: PreviewProvider {
 
     static var previews: some View {
         SettingsView()
-            .environmentObject(ViewModel())
+            .environmentObject(ViewModel(selectedTypes: [.Mobility]))
     }
 }

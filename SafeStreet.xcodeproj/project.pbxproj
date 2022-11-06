@@ -24,6 +24,7 @@
 		E1D4557229174BCB00D59FCD /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D4557129174BCB00D59FCD /* SettingsView.swift */; };
 		E1D4557829174D3E00D59FCD /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D4557729174D3E00D59FCD /* Friend.swift */; };
 		E1D4557A29174EBC00D59FCD /* TermsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D4557929174EBC00D59FCD /* TermsView.swift */; };
+		E1FCAA3329185A2B00171ABB /* VitoKitCore in Frameworks */ = {isa = PBXBuildFile; productRef = E1FCAA3229185A2B00171ABB /* VitoKitCore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		E1D4557129174BCB00D59FCD /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		E1D4557729174D3E00D59FCD /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		E1D4557929174EBC00D59FCD /* TermsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsView.swift; sourceTree = "<group>"; };
+		E1FCAA302918598600171ABB /* VitoKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = VitoKit; path = ../GitHub/VitoKit; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1FCAA3329185A2B00171ABB /* VitoKitCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,8 +64,10 @@
 		E1D4553F291742F400D59FCD = {
 			isa = PBXGroup;
 			children = (
+				E1FCAA2F2918598600171ABB /* Packages */,
 				E1D4554A291742F400D59FCD /* SafeStreet */,
 				E1D45549291742F400D59FCD /* Products */,
+				E1FCAA3129185A2B00171ABB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -154,6 +159,21 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		E1FCAA2F2918598600171ABB /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				E1FCAA302918598600171ABB /* VitoKit */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		E1FCAA3129185A2B00171ABB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -170,6 +190,9 @@
 			dependencies = (
 			);
 			name = SafeStreet;
+			packageProductDependencies = (
+				E1FCAA3229185A2B00171ABB /* VitoKitCore */,
+			);
 			productName = SafeStreet;
 			productReference = E1D45548291742F400D59FCD /* SafeStreet.app */;
 			productType = "com.apple.product-type.application";
@@ -198,6 +221,8 @@
 				Base,
 			);
 			mainGroup = E1D4553F291742F400D59FCD;
+			packageReferences = (
+			);
 			productRefGroup = E1D45549291742F400D59FCD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -295,7 +320,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -349,7 +374,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -370,6 +395,8 @@
 				DEVELOPMENT_TEAM = 9NG3C5HP77;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "To give insights into mobility";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "To give insights into mobility";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -399,6 +426,8 @@
 				DEVELOPMENT_TEAM = 9NG3C5HP77;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "To give insights into mobility";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "To give insights into mobility";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -439,6 +468,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E1FCAA3229185A2B00171ABB /* VitoKitCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = VitoKitCore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E1D45540291742F400D59FCD /* Project object */;
 }

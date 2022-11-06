@@ -13,6 +13,7 @@ struct ChartData: Identifiable, Hashable {
     var date = Date().addingTimeInterval(60 * 60 * Double.random(in: 1...5))
     var title = ["Test", "Testing"].randomElement() ?? "Test"
 }
+
 extension ChartData {
     static let test = [
     ChartData(),

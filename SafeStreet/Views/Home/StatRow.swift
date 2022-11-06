@@ -18,11 +18,9 @@ struct StatRow: View {
                 .font(.system(size: 65))
             Spacer()
             Text("\(type.normalized) decreasing by \(precent.formatted(.percent))")
-                .font(.headline)
+                .font(.system(.headline, design: .rounded))
                 .multilineTextAlignment(.trailing)
         }
-        
-        .fontDesign(.monospaced)
         .fontWeight(.bold)
         .padding(.all)
     }
