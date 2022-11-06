@@ -23,11 +23,18 @@ class ViewModel: Vito {
     
     @AppStorage("agreeToTerms") var agreeToTerms = false
     
+    @AppStorage("myCode") var myCode = UUID().uuidString
+    
+    @AppStorage("othersCode") var othersCode = ""
+    
     init(selectedTypes: [HealthType]) {
         super.init(selectedTypes: selectedTypes)
         self.selectedTypes = selectedTypes
         if !agreeToTerms {
             navPath.append(Route.terms)
         }
+    }
+    static func percentageDifference(num1: Double, num2: Double) -> Double {
+        return (num2 - num1) / num1
     }
 }

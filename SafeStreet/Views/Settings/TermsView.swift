@@ -32,6 +32,6 @@ struct TermsView: View {
 struct TermsView_Previews: PreviewProvider {
     static var previews: some View {
         TermsView()
-            .environmentObject(ViewModel(selectedTypes: [.Mobility]))
+            .environmentObject(ViewModel(selectedTypes: []))
     }
 }

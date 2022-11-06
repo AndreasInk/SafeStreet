@@ -25,6 +25,7 @@
 		E1D4557829174D3E00D59FCD /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D4557729174D3E00D59FCD /* Friend.swift */; };
 		E1D4557A29174EBC00D59FCD /* TermsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D4557929174EBC00D59FCD /* TermsView.swift */; };
 		E1FCAA3329185A2B00171ABB /* VitoKitCore in Frameworks */ = {isa = PBXBuildFile; productRef = E1FCAA3229185A2B00171ABB /* VitoKitCore */; };
+		E1FCAA352918627C00171ABB /* DesignateAFriendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FCAA342918627C00171ABB /* DesignateAFriendView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,8 @@
 		E1D4557729174D3E00D59FCD /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		E1D4557929174EBC00D59FCD /* TermsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsView.swift; sourceTree = "<group>"; };
 		E1FCAA302918598600171ABB /* VitoKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = VitoKit; path = ../GitHub/VitoKit; sourceTree = "<group>"; };
+		E1FCAA342918627C00171ABB /* DesignateAFriendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignateAFriendView.swift; sourceTree = "<group>"; };
+		E1FCAA36291865E600171ABB /* SafeStreet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SafeStreet.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +85,7 @@
 		E1D4554A291742F400D59FCD /* SafeStreet */ = {
 			isa = PBXGroup;
 			children = (
+				E1FCAA36291865E600171ABB /* SafeStreet.entitlements */,
 				E1D4554B291742F400D59FCD /* SafeStreetApp.swift */,
 				E1D455642917443900D59FCD /* Extension */,
 				E1D4555F2917440C00D59FCD /* Views */,
@@ -144,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				E1D4557129174BCB00D59FCD /* SettingsView.swift */,
+				E1FCAA342918627C00171ABB /* DesignateAFriendView.swift */,
 				E1D4557929174EBC00D59FCD /* TermsView.swift */,
 			);
 			path = Settings;
@@ -262,6 +267,7 @@
 				E1D45570291747C500D59FCD /* HKQuanity+Ext.swift in Sources */,
 				E1D455682917445700D59FCD /* Color+Ext.swift in Sources */,
 				E1D455662917444B00D59FCD /* Int64+Extension.swift in Sources */,
+				E1FCAA352918627C00171ABB /* DesignateAFriendView.swift in Sources */,
 				E1D455632917442A00D59FCD /* Image+Extension.swift in Sources */,
 				E1D4557229174BCB00D59FCD /* SettingsView.swift in Sources */,
 			);
@@ -389,6 +395,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SafeStreet/SafeStreet.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SafeStreet/Preview Content\"";
@@ -420,6 +427,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SafeStreet/SafeStreet.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SafeStreet/Preview Content\"";

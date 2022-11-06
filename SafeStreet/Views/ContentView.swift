@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import VitoKitCore
+import HealthKit
 
 struct ContentView: View {
     @StateObject var vm = ViewModel(selectedTypes: [.Mobility])
@@ -14,16 +16,19 @@ struct ContentView: View {
             IntroView()
                 .onAppear {
                     Task(priority: .userInitiated) {
-                        try await Task.sleep(nanoseconds: UInt64.second)
+                        
                         if vm.agreeToTerms {
+                            try await getMobilityData()
+                            try await Task.sleep(nanoseconds: UInt64.second)
                             vm.navPath.append(Route.home)
+                            
                         }
                     }
                 }
                 .navigationDestination(for: Route.self) { route in
                     switch route {
                     case .home:
-                        HomeView(chartData: ChartData.test)
+                        HomeView(chartData: vm.healthData)
                     case .terms:
                         TermsView(pushedFromSettings: false)
                 default:
@@ -34,6 +39,12 @@ struct ContentView: View {
         }
         .environmentObject(vm)
         
+    }
+    func getMobilityData() async throws {
+        try await vm.authorize(selectedTypes: [.Mobility])
+        for type in HKQuantityTypeIdentifier.Mobility {
+            await vm.outliers(for: type, unit: type.unit, with: Date().addingTimeInterval(.month), to: Date())
+        }
     }
 }
 

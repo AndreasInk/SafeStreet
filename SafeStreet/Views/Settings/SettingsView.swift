@@ -23,7 +23,7 @@ struct SettingsView: View {
                     }
                 }
             NavigationLink {
-                
+                DesignateAFriendView()
             } label: {
                 Text("Designate a new friend")
             }
@@ -39,6 +39,7 @@ struct SettingsView: View {
                     }
                     if showMultiDates {
                         MultiDatePicker("Notification Schedule Dates", selection: $vm.friendNotificationScheduleDates)
+                            .fixedSize(horizontal: false, vertical: true)
                     }
                 }
                 .padding(.vertical)
@@ -73,7 +74,7 @@ struct SettingsView: View {
         )
         .navigationBarTitleDisplayMode(NavigationBarItem.TitleDisplayMode.large)
         .fontWeight(.semibold)
-        .font(.system(.headline, design: .rounded))
+        .font(.system(.subheadline, design: .rounded))
     }
 }
 

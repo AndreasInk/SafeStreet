@@ -13,11 +13,18 @@ struct StatRow: View {
     let precent: Double
     var body: some View {
         HStack {
-            SFSymbol.arrowDown
-                .foregroundStyle(Gradient.split)
-                .font(.system(size: 65))
+            Group {
+                if precent > 0  {
+                    SFSymbol.arrowUp
+                } else {
+                    SFSymbol.arrowDown
+                }
+            }
+            .foregroundStyle(Gradient.split)
+            .font(.system(size: 65))
+               
             Spacer()
-            Text("\(type.normalized) decreasing by \(precent.formatted(.percent))")
+            Text("\(type.normalized) \(precent > 0 ? "increasing" : "decreasing") by \((round(1000 * precent)/1000).formatted(.percent))")
                 .font(.system(.headline, design: .rounded))
                 .multilineTextAlignment(.trailing)
         }

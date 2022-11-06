@@ -15,5 +15,6 @@ struct SFSymbol {
     static let thumbsDown = Image(systemName: "hand.thumbsdown.fill")
     static let settings = Image(systemName: "gear")
     static let arrowDown = Image(systemName: "arrow.down.circle.fill")
+    static let arrowUp = Image(systemName: "arrow.up.circle.fill")
     static let xmark = Image(systemName: "xmark")
 }
