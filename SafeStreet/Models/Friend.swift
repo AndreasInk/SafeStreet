@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Friend: Identifiable, Hashable {
+struct Friend: Identifiable, Hashable, Codable {
     var id: String
     var firstName: String
     var isListeningForAlerts = true

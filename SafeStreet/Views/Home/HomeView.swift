@@ -21,6 +21,10 @@ struct HomeView: View {
                     let secondToLast = filteredToType.popLast()?.data ?? 0
                     StatRow(type: type.type, precent: ViewModel.percentageDifference(num1: secondToLast, num2: last))
                     Chart(filteredToType) { data in
+                        if data.risk > 0 {
+                            PointMark(x: .value("", data.date),
+                                      y: .value("", data.data))
+                        }
                         LineMark(x: .value("", data.date),
                                  y: .value("", data.data))
                         .foregroundStyle(by: .value("", HKQuantityTypeIdentifier(rawValue: data.title).normalized))

@@ -38,6 +38,12 @@ struct DesignateAFriendView: View {
                 TextField("Friend's Code", text: $vm.othersCode)
                     .font(.system(.subheadline, design: .rounded))
                     .textFieldStyle(.roundedBorder)
+                    .onSubmit {
+                        if !vm.othersCode.isEmpty {
+                            vm.friends.append(Friend(id: vm.othersCode, firstName: "New friend's name"))
+                            vm.othersCode = ""
+                        }
+                    }
             }
             .padding(.top, 38)
             .fixedSize(horizontal: false, vertical: true)

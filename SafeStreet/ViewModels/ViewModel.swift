@@ -11,7 +11,7 @@ class ViewModel: Vito {
     
     @Published var navPath = NavigationPath()
     
-    @Published var friends = Friend.test
+    @UserDefault("friends", defaultValue: [Friend]()) var friends
     
     @Published var friendNotificationScheduleTimeStart = Date()
     
@@ -37,4 +37,5 @@ class ViewModel: Vito {
     static func percentageDifference(num1: Double, num2: Double) -> Double {
         return (num2 - num1) / num1
     }
+    
 }

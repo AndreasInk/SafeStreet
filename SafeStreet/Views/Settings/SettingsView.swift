@@ -13,13 +13,15 @@ struct SettingsView: View {
     var body: some View {
         List {
             Section("Friends") {
-                HStack {
-                    ForEach(Array(zip(vm.friends, vm.friends.indices)), id: \.1) { friend, friendIndex in
-                        Text(friend.firstName)
-                            .strikethrough(friend.isListeningForAlerts)
-                            .onTapGesture {
-                                vm.friends[friendIndex].isListeningForAlerts.toggle()
-                            }
+                if !vm.friends.isEmpty {
+                    HStack {
+                        ForEach(Array(zip(vm.friends, vm.friends.indices)), id: \.1) { friend, friendIndex in
+                            Text(friend.firstName)
+                                .strikethrough(friend.isListeningForAlerts)
+                                .onTapGesture {
+                                    vm.friends[friendIndex].isListeningForAlerts.toggle()
+                                }
+                        }
                     }
                 }
             NavigationLink {
