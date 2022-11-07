@@ -9,9 +9,16 @@ import SwiftUI
 
 @main
 struct SafeStreetApp: App {
+    @StateObject var vm = ViewModel(selectedTypes: [.Mobility])
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationStack(path: $vm.navPath) {
+                ContentView()
+                    .onOpenURL { url in
+                        
+                    }
+            }
+            .environmentObject(vm)
         }
     }
 }

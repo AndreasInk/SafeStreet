@@ -10,9 +10,9 @@ import VitoKitCore
 import HealthKit
 
 struct ContentView: View {
-    @StateObject var vm = ViewModel(selectedTypes: [.Mobility])
+    @EnvironmentObject var vm: ViewModel
     var body: some View {
-        NavigationStack(path: $vm.navPath) {
+       
             IntroView()
                 .onAppear {
                     Task(priority: .userInitiated) {
@@ -38,8 +38,8 @@ struct ContentView: View {
                 }
             }
             
-        }
-        .environmentObject(vm)
+        
+      
         
     }
     func getMobilityData() async throws {
