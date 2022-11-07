@@ -45,7 +45,8 @@ struct ContentView: View {
     func getMobilityData() async throws {
         try await vm.authorize(selectedTypes: [.Mobility])
         for type in HKQuantityTypeIdentifier.Mobility {
-            await vm.outliers(for: type, unit: type.unit, with: Date().addingTimeInterval(.month), to: Date())
+            await vm.outliers(for: type, unit: type.unit, with: Date().addingTimeInterval(.day * 14), to: Date())
+            vm.checkIfNotificationNeeded(vm.healthData.filter {$0.title == type.type.rawValue})
         }
     }
 }

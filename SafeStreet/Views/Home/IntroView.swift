@@ -16,6 +16,8 @@ struct IntroView: View {
                 .foregroundStyle(Gradient.split)
             Text("SAFE STREET")
                 .font(.system(size: 50, design: .rounded))
+            ProgressView()
+                .progressViewStyle(.circular)
         }
     }
 }

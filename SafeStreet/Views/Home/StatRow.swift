@@ -25,7 +25,7 @@ struct StatRow: View {
                
             Spacer()
             Text("\(type.normalized) \(precent > 0 ? "increasing" : "decreasing") by \((round(1000 * precent)/1000).formatted(.percent))")
-                .font(.system(.headline, design: .rounded))
+                .font(.system(.caption, design: .rounded))
                 .multilineTextAlignment(.trailing)
         }
         .fontWeight(.bold)
